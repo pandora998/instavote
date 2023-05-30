@@ -6,18 +6,10 @@ patchesStrategicMerge:
 - deployment.yaml
 - service.yaml
 namespace: instavote
-
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-- ../base
-patchesStrategicMerge:
-- deployment.yaml
-- service.yaml
-namespace: instavote
 images:
   - name: schoolofdevops/vote
-  newTag: v4
-  replicas:
+    newTag: v4
+replicas:
   - name: vote
     count: 4
+
