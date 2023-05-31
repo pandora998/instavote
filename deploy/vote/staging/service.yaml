@@ -7,7 +7,7 @@ metadata:
   name: vote
 spec:
   ports:
-  - name: "http"
+  - name: "80"
     port: 80
     targetPort: 80
     nodePort: 30200
